@@ -3,7 +3,7 @@ ui:
   serviceType: "NodePort"
 
 server:
-  standalone:
+  dev:
     enabled: false
 
   authDelegator:
