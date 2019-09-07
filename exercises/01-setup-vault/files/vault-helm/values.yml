@@ -1,0 +1,10 @@
+ui:
+  enabled: false
+  serviceType: "NodePort"
+
+server:
+  standalone:
+    enabled: false
+
+  authDelegator:
+    enabled: false
