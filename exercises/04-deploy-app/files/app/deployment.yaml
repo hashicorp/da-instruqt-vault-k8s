@@ -15,6 +15,7 @@ spec:
       labels:
         app: kv-sidecar
     spec:
+      serviceAccountName: CHANGE_ME
       volumes:
       - name: secrets
         emptyDir: {}
@@ -24,6 +25,7 @@ spec:
 
       securityContext:
         runAsGroup: 1000
+        runAsUser: 1000
 
       initContainers:
       # The vault-authenticator container authenticates the container using the
@@ -40,7 +42,7 @@ spec:
         - name: VAULT_ADDR
           value: "http://vault:8200"
         - name: VAULT_ROLE
-          value: myapp-role
+          value: demo
 
       containers:
         # The consul-template container will pull secrets from Vault and expose
