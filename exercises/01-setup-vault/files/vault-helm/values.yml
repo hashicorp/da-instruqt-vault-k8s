@@ -5,6 +5,3 @@ ui:
 server:
   dev:
     enabled: false
-
-  authDelegator:
-    enabled: false
