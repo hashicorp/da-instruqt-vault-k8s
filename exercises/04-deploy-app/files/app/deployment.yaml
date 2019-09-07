@@ -42,13 +42,13 @@ spec:
         - name: VAULT_ADDR
           value: "http://vault:8200"
         - name: VAULT_ROLE
-          value: demo
+          value: myapp-role
 
       containers:
         # The consul-template container will pull secrets from Vault and expose
         # them as files on disk.
       - name: consul-template
-        image: hashicorp/consul-template:0.20.0-light
+        image: hashicorp/consul-template:0.21.3-light
         imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: secrets
