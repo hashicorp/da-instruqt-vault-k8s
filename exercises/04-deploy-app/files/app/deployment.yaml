@@ -70,6 +70,7 @@ spec:
               }
             }
             template {
+              contents = <<EOH
                 ---
                 {{- with secret "secret/data/myapp/config" }}
                 username: {{ .Data.data.username }}
