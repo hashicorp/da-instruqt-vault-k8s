@@ -70,11 +70,10 @@ spec:
               }
             }
             template {
-              contents = <<EOH
                 ---
-                {{- with secret "secret/myapp/config" }}
-                username: {{ .Data.username }}
-                password: {{ .Data.password }}
+                {{- with secret "secret/data/myapp/config" }}
+                username: {{ .Data.data.username }}
+                password: {{ .Data.data.password }}
                 {{ end }}
               EOH
               destination = "/etc/secrets/config"
