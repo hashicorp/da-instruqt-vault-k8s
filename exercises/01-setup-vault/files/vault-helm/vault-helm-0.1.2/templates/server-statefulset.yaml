@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MIT
+
 # StatefulSet to run the actual vault server cluster.
 {{ template "vault.mode" . }}
 {{- if and (ne .mode "") (eq (.Values.global.enabled | toString) "true") }}
