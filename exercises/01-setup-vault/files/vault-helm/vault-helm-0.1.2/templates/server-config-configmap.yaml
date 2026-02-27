@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MIT
+
 {{ template "vault.mode" . }}
 {{- if and (eq (.Values.global.enabled | toString) "true") (ne .mode "dev") -}}
 {{ if or (ne .Values.server.standalone.config "")  (ne .Values.server.ha.config "") -}}
