@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2019, 2026
+
 variable "project" {
   default = "vault-helm-dev-246514"
 
