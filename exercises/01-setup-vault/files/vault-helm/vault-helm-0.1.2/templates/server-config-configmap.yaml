@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2019, 2026
+
 {{ template "vault.mode" . }}
 {{- if and (eq (.Values.global.enabled | toString) "true") (ne .mode "dev") -}}
 {{ if or (ne .Values.server.standalone.config "")  (ne .Values.server.ha.config "") -}}
